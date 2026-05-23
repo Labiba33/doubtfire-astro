@@ -140,18 +140,21 @@ GET /api/projects
 
 - URL: `/api/projects`
 - Method: `GET`
-- Parameters: 
-    
-    | Parameter          | Description                                             | Parameter Type | Data Type | Mandatory |
-    |--------------------|---------------------------------------------------------|----------------|-----------|-----------|
-    | include_inactive   | Include projects for units that are no longer active?   | query          | boolean   | No        |
-    | Username           | Username                                                | header         | string    | Yes       |
-    | Auth_Token         | Authentication token                                    | header         | string    | Yes       |
+- Parameters:
 
-- Response: `200 OK`.    
+    | Parameter                 | Description                                              | Parameter Type | Data Type | Mandatory |
+    |---------------------------|----------------------------------------------------------|----------------|-----------|-----------|
+    | include_inactive          | Include projects for units that are no longer active?    | query          | boolean   | No        |
+    | include_task_definitions  | Include task definitions for each project's unit         | query          | boolean   | No        |
+    | Username                  | Username                                                 | header         | string    | Yes       |
+    | Auth_Token                | Authentication token                                     | header         | string    | Yes       |
+
+- Response: `200 OK`.
 
 -   Example Request:
-    ```bash
+```bash
+    curl -X GET --header 'Accept: application/json' --header 'Username: student_1' --header 'Auth_Token: bxzSEr86Qgivu5saj6NQ' 'http://localhost:3000/api/projects?include_inactive=true&include_task_definitions=true'
+```
     curl -X GET --header 'Accept: application/json' --header 'Username: student_1' --header 'Auth_Token: bxzSEr86Qgivu5saj6NQ' 'http://localhost:3000/api/projects?include_inactive=true'
     ```
 
