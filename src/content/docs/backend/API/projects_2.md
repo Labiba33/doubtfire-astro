@@ -154,9 +154,6 @@ GET /api/projects
 -   Example Request:
 ```bash
     curl -X GET --header 'Accept: application/json' --header 'Username: student_1' --header 'Auth_Token: bxzSEr86Qgivu5saj6NQ' 'http://localhost:3000/api/projects?include_inactive=true&include_task_definitions=true'
-```
-    curl -X GET --header 'Accept: application/json' --header 'Username: student_1' --header 'Auth_Token: bxzSEr86Qgivu5saj6NQ' 'http://localhost:3000/api/projects?include_inactive=true'
-    ```
 
 - Response Body:
     ```json
