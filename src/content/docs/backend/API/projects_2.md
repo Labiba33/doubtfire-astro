@@ -175,6 +175,17 @@ GET /api/projects
                 "target_grade": 3,
                 "portfolio_available": false
             },
+            "task_definitions": [
+                {
+                    "id": 1,
+                    "name": "Task 1",
+                    "abbreviation": "T1",
+                    "description": "First task definition",
+                    "target_grade": 2,
+                    "start_date": "2024-03-09",
+                    "target_date": "2024-04-09"
+                }
+            ],
             {
                 "id": 20,
                 "campus_id": 3,
